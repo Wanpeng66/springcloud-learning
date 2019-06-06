@@ -1,0 +1,14 @@
+
+server:
+  port: 9007
+spring:
+  application:
+    name: eureka-client-consumer-ribbo-feign
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01:9001/eureka/
+
+
+
+

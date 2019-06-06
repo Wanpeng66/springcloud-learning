@@ -1,0 +1,15 @@
+
+server:
+  port: 9005
+spring:
+  application:
+    name: eureka-client-consumer-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01:9001/eureka/
+    register-with-eureka: false
+
+
+
+

@@ -1,0 +1,20 @@
+
+server:
+  port: 8081
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Wanpeng66/config-repo-demo.git
+
+eureka:
+  client:
+    service-url:
+       defaultZone: http://localhost:9001/eureka/
+  instance:
+       instance-id: config-server-git
+       prefer-ip-address: true
+

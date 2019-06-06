@@ -1,0 +1,23 @@
+spring:
+  cloud:
+      config:
+        #如果分佈式配置中心不是作為一個微服務時的配置
+        #uri: http://localhost:8081/
+        #label: master
+        #如果分佈式配置中心作為一個服務時的配置
+        profile: default
+        discovery:
+          enabled: true
+          service-id: config-server-git
+  application:
+      name: eureka-client-prvider
+
+server:
+  port: 9003
+eureka:
+  client:
+      service-url:
+            defaultZone: http://localhost:9001/eureka/
+  instance:
+    instance-id: eureka-client-prvider01
+    prefer-ip-address: true

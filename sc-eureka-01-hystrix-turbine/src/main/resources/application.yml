@@ -1,0 +1,18 @@
+
+server:
+  port: 9090
+management:
+  port: 9091
+spring:
+  application:
+    name: turbine
+eureka:
+  client:
+    service-url:
+                defaultZone: http://localhost:9001/eureka/
+turbine:
+  app-config: eureka-consumer-ribbon-hystrix
+  cluster-name-expression: new String('default')
+  combine-host-port: true
+
+
