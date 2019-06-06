@@ -8,6 +8,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka01:9001/eureka/
+    register-with-eureka: false
+
+feign:
+  httpclient:
+    enabled: true
+  okhttp:
+    enabled: true
 
 
 
