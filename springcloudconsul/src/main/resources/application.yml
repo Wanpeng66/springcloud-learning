@@ -1,0 +1,17 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: consul-service
+  cloud:
+    consul:
+      host: 106.15.233.201
+      port: 8500
+      discovery:
+        instance-id: consul-service-id
+        service-name: consul-service-name
+        #tags:
+         #- dev
+        prefer-ip-address: true
+        health-check-interval: 3s
+        health-check-path: /health
